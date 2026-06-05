@@ -22,7 +22,7 @@ export default {
         rules: [
             {
                 test: /\.html$/i,
-                loader: "html-loader",
+                use: ["html-loader"],
             },
             {
                 test: /\.css$/i,
