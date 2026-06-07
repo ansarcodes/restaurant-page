@@ -33,4 +33,9 @@ export default function() {
     schedule2.textContent = "Sat-Sun 10:00-15:00"
     homeSchedule.appendChild(schedule2);
     divContent.appendChild(homeSchedule);
+
+    let homeAddress = document.createElement("div");
+    homeAddress.classList.add("address");
+    homeAddress.textContent = "Address: 42 Green Ave, Mayweed Valley";
+    divContent.appendChild(homeAddress);
 };
