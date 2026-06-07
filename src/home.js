@@ -24,6 +24,10 @@ export default function() {
 
     let homeSchedule = document.createElement("div");
     homeSchedule.classList.add("schedule");
+    let scheduleTitle = document.createElement("div");
+    scheduleTitle.classList.add("schedule-title");
+    scheduleTitle.textContent = "Schedule";
+    homeSchedule.appendChild(scheduleTitle);
     let schedule1 = document.createElement("div");
     schedule1.classList.add("schedule-days");
     schedule1.textContent = "Mon-Fri 09:00-18:00";
