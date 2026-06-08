@@ -1,22 +1,23 @@
-import homeImg from "./images/shamblen-studios-k0u3zcxTIaY-unsplash.jpg";
+import homeImg from "./images/mayweed-flower.png";
 export default function() {
     const divContent = document.getElementById("content");
     let divTitle = document.createElement("div");
     divTitle.textContent = "Mayweed  Valley";
     divTitle.classList.add("title");
-    
-    let homeImageFigure = document.createElement("figure");
-    let homeImageFigcaption = document.createElement("figcaption");
-    let homeImage = document.createElement("img");
-    homeImage.id = "homeImage";
-    homeImage.src = homeImg;
-    homeImage.alt = "Cherry Pie";
-    homeImageFigcaption.innerHTML = `Photo by <a href="https://unsplash.com/@shamblenstudios?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Shamblen Studios</a> on <a href="https://unsplash.com/photos/a-bunch-of-different-types-of-fruit-k0u3zcxTIaY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>`;
-    homeImageFigure.append(homeImage, homeImageFigcaption);
 
     let homeDescription = document.createElement("div");
     homeDescription.classList.add("description");
     homeDescription.textContent = "Welcome to our cozy place! We offer tasty food and inner peace.";
+
+    let homeImage = document.createElement("div");
+    homeImage.classList.add("home-image-container");
+    for(let i = 0; i < 5; i++) {
+        let image = document.createElement("img");
+        image.src = homeImg;
+        image.alt = "Mayweed flower"
+        image.classList.add("home-image");
+        homeImage.append(image);
+    }
 
     let homeSchedule = document.createElement("div");
     homeSchedule.classList.add("schedule");
@@ -35,5 +36,5 @@ export default function() {
     homeAddress.classList.add("address");
     homeAddress.textContent = "Address: 42 Green Ave, Mayweed Valley";
 
-    divContent.append(divTitle, homeImageFigure, homeDescription, homeSchedule, homeAddress);
+    divContent.append(divTitle, homeDescription, homeImage, homeSchedule, homeAddress);
 };
