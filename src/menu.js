@@ -14,6 +14,25 @@ export default function() {
     menuTitle.classList.add("title");
     menuTitle.textContent = "Menu";
     
-    
-    divContent.append(menuTitle);
+    let menuItemsContainer = document.createElement("div");
+    menuItemsContainer.classList.add("menu-items-container");
+
+    let menuItems = [];
+
+    class menuItem {
+        constructor(name, description, price) {
+            this.name = name;
+            this.description = description;
+            this.price = price;
+            this.image = `${this.name}.jpg`;
+        }
+    };
+
+    function addToMenu(name, description, price) {
+        const newItem = new menuItem(name, description, price);
+        menuItems.push(newItem);
+    }
+
+
+    divContent.append(menuTitle, menuItemsContainer);
 }
