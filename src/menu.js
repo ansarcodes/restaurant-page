@@ -1,4 +1,6 @@
-    // let homeImageFigure = document.createElement("figure");
+import cherryPieImg from "./images/cherry-pie.jpg";
+import blinyImg from "./images/bliny.jpg";
+// let homeImageFigure = document.createElement("figure");
     // let homeImageFigcaption = document.createElement("figcaption");
     // let homeImage = document.createElement("img");
     // homeImage.id = "homeImage";
@@ -6,6 +8,10 @@
     // homeImage.alt = "Cherry Pie";
     // homeImageFigcaption.innerHTML = `Photo by <a href="https://unsplash.com/@shamblenstudios?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Shamblen Studios</a> on <a href="https://unsplash.com/photos/a-bunch-of-different-types-of-fruit-k0u3zcxTIaY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>`;
     // homeImageFigure.append(homeImage, homeImageFigcaption);
+    //Photo by <a href="https://unsplash.com/@nouvellebeautybymarion?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">M Draa</a> on <a href="https://unsplash.com/photos/white-and-blue-ceramic-plate-26NcU5Vkd5o?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+    //Photo by <a href="https://unsplash.com/@wanderlust612?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Katelynn Ruffner</a> on <a href="https://unsplash.com/photos/white-pasta-on-black-ceramic-plate-A43QCRZK7NM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+      
+      
 
 export default function() {
     const divContent = document.getElementById("content");
@@ -17,21 +23,40 @@ export default function() {
     let menuItemsContainer = document.createElement("div");
     menuItemsContainer.classList.add("menu-items-container");
 
-    let menuItems = [];
+    let menuItems = [
+        {name:"Cherry Pie", description: "A classic dessert made with a buttery, flaky pastry crust and a jammy fruit filling", price: "$50", image:cherryPieImg, credits: `Photo by <a href="https://unsplash.com/@shamblenstudios?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Shamblen Studios</a> on <a href="https://unsplash.com/photos/a-bunch-of-different-types-of-fruit-k0u3zcxTIaY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>`
+        },
+        {name: "Bliny", description: "A traditional slavic thin pancakes", price: "$25", image:blinyImg, credits: `Photo by <a href="https://unsplash.com/@nouvellebeautybymarion?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">M Draa</a> on <a href="https://unsplash.com/photos/white-and-blue-ceramic-plate-26NcU5Vkd5o?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>`},
+        {},
+    ];
 
-    class menuItem {
-        constructor(name, description, price) {
-            this.name = name;
-            this.description = description;
-            this.price = price;
-            this.image = `${this.name}.jpg`;
-        }
-    };
+    (function(){
+        menuItems.forEach((item) => {
+            let itemContainer = document.createElement("div");
+            itemContainer.classList.add("menu-item");
 
-    function addToMenu(name, description, price) {
-        const newItem = new menuItem(name, description, price);
-        menuItems.push(newItem);
-    }
+            let itemName = document.createElement("div");
+            itemName.textContent = item.name;
+            itemName.classList.add("menu-item-name");
+            let itemDescription = document.createElement("div");
+            itemDescription.textContent = item.description;
+            itemDescription.classList.add("menu-item-description");
+            let itemPrice = document.createElement("div");
+            itemPrice.textContent = item.price;
+            itemPrice.classList.add("menu-item-price");
+            let itemImageContainer = document.createElement("div");
+            itemImageContainer.classList.add("menu-item-image-container");
+            let itemImage = document.createElement("img");
+            itemImage.src = item.image;
+            itemImage.alt = item.name;
+            let itemImageCredits = document.createElement("div");
+            itemImageCredits.innerHTML = item.credits;
+            itemImageContainer.append(itemImage, itemImageCredits);
+
+            itemContainer.append(itemName, itemDescription, itemPrice, itemImageContainer);
+            menuItemsContainer.appendChild(itemContainer);
+        });
+    })();
 
 
     divContent.append(menuTitle, menuItemsContainer);
