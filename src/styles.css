@@ -2,6 +2,6 @@
     margin: 0;
     padding: 0;
 }
-#homeImage {
-    width: 320px;
+.menu-item img{
+    width:320px;
 }

@@ -1,14 +1,7 @@
 import cherryPieImg from "./images/cherry-pie.jpg";
 import blinyImg from "./images/bliny.jpg";
-// let homeImageFigure = document.createElement("figure");
-    // let homeImageFigcaption = document.createElement("figcaption");
-    // let homeImage = document.createElement("img");
-    // homeImage.id = "homeImage";
-    // homeImage.src = homeImg;
-    // homeImage.alt = "Cherry Pie";
-    // homeImageFigcaption.innerHTML = `Photo by <a href="https://unsplash.com/@shamblenstudios?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Shamblen Studios</a> on <a href="https://unsplash.com/photos/a-bunch-of-different-types-of-fruit-k0u3zcxTIaY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>`;
-    // homeImageFigure.append(homeImage, homeImageFigcaption);
-    //Photo by <a href="https://unsplash.com/@nouvellebeautybymarion?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">M Draa</a> on <a href="https://unsplash.com/photos/white-and-blue-ceramic-plate-26NcU5Vkd5o?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+import carrotCakeImg from "./images/carrot-cake.jpg";
+
     //Photo by <a href="https://unsplash.com/@wanderlust612?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Katelynn Ruffner</a> on <a href="https://unsplash.com/photos/white-pasta-on-black-ceramic-plate-A43QCRZK7NM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
       
       
@@ -27,7 +20,7 @@ export default function() {
         {name:"Cherry Pie", description: "A classic dessert made with a buttery, flaky pastry crust and a jammy fruit filling", price: "$50", image:cherryPieImg, credits: `Photo by <a href="https://unsplash.com/@shamblenstudios?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Shamblen Studios</a> on <a href="https://unsplash.com/photos/a-bunch-of-different-types-of-fruit-k0u3zcxTIaY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>`
         },
         {name: "Bliny", description: "A traditional slavic thin pancakes", price: "$25", image:blinyImg, credits: `Photo by <a href="https://unsplash.com/@nouvellebeautybymarion?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">M Draa</a> on <a href="https://unsplash.com/photos/white-and-blue-ceramic-plate-26NcU5Vkd5o?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>`},
-        {},
+        {name: "Carrot Cake", description:"A sweet and moist spice cake, full of cut carrots and toasted nuts, and covered in cream cheese icing", price: "$50", image: carrotCakeImg, credits: `Photo by <a href="https://unsplash.com/@wanderlust612?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Katelynn Ruffner</a> on <a href="https://unsplash.com/photos/white-pasta-on-black-ceramic-plate-A43QCRZK7NM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>`},
     ];
 
     (function(){
