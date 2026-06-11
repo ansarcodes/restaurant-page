@@ -2,10 +2,6 @@ import cherryPieImg from "./images/cherry-pie.jpg";
 import blinyImg from "./images/bliny.jpg";
 import carrotCakeImg from "./images/carrot-cake.jpg";
 
-    //Photo by <a href="https://unsplash.com/@wanderlust612?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Katelynn Ruffner</a> on <a href="https://unsplash.com/photos/white-pasta-on-black-ceramic-plate-A43QCRZK7NM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-      
-      
-
 export default function() {
     const divContent = document.getElementById("content");
     
