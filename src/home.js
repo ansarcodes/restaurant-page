@@ -19,22 +19,22 @@ export default function() {
         homeImage.append(image);
     }
 
-    let homeSchedule = document.createElement("div");
-    homeSchedule.classList.add("schedule");
-    let scheduleTitle = document.createElement("div");
-    scheduleTitle.classList.add("schedule-title");
-    scheduleTitle.textContent = "Schedule";
-    let schedule1 = document.createElement("div");
-    schedule1.classList.add("schedule-days");
-    schedule1.textContent = "Mon-Fri 09:00-18:00";
-    let schedule2 = document.createElement("div");
-    schedule2.classList.add("schedule-days");
-    schedule2.textContent = "Sat-Sun 10:00-15:00"
-    homeSchedule.append(scheduleTitle, schedule1, schedule2);
+    let homeHours = document.createElement("div");
+    homeHours.classList.add("hours");
+    let hoursTitle = document.createElement("div");
+    hoursTitle.classList.add("hours-title");
+    hoursTitle.textContent = "Hours";
+    let hours1 = document.createElement("div");
+    hours1.classList.add("hours-days");
+    hours1.textContent = "Mon-Fri 09:00-18:00";
+    let hours2 = document.createElement("div");
+    hours2.classList.add("hours-days");
+    hours2.textContent = "Sat-Sun 10:00-15:00"
+    homeHours.append(hoursTitle, hours1, hours2);
 
     let homeAddress = document.createElement("div");
     homeAddress.classList.add("address");
     homeAddress.textContent = "Address: 42 Green Ave, Mayweed Valley";
 
-    divContent(homeTitle, homeDescription, homeImage, homeSchedule, homeAddress);
+    divContent(homeTitle, homeDescription, homeImage, homeHours, homeAddress);
 };
