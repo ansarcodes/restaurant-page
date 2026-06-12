@@ -37,4 +37,5 @@ export default function() {
     homeAddress.textContent = "Address: 42 Green Ave, Mayweed Valley";
 
     divContent(homeTitle, homeDescription, homeImage, homeHours, homeAddress);
+    document.getElementById("home-btn").classList.add("active");
 };

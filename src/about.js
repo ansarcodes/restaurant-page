@@ -17,4 +17,6 @@ export default function(){
     aboutContact.textContent = "Contact Us: +1-234-56-78 | contact@email.com";
 
     divContent(aboutTitle, aboutDescription, aboutEstablished, aboutContact);
+    document.getElementById("about-btn").classList.add("active");
+
 };

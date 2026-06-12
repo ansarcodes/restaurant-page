@@ -15,4 +15,7 @@ export default function(...children){
     const divContent = document.getElementById("content");
     divContent.replaceChildren();
     divContent.append(...children);
+    document.querySelectorAll("button").forEach((button)=>{
+        button.classList.remove("active");
+    })
 };

@@ -49,4 +49,5 @@ export default function() {
     })();
 
     divContent(menuTitle, menuItemsContainer);
+    document.getElementById("menu-btn").classList.add("active");
 }
