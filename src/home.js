@@ -1,6 +1,6 @@
 import homeImg from "./images/mayweed-flower.png";
+import divContent from "./index.js";
 export default function() {
-    const divContent = document.getElementById("content");
     let homeTitle = document.createElement("div");
     homeTitle.textContent = "Mayweed  Valley";
     homeTitle.classList.add("title");
@@ -36,5 +36,5 @@ export default function() {
     homeAddress.classList.add("address");
     homeAddress.textContent = "Address: 42 Green Ave, Mayweed Valley";
 
-    divContent.append(homeTitle, homeDescription, homeImage, homeSchedule, homeAddress);
+    divContent(homeTitle, homeDescription, homeImage, homeSchedule, homeAddress);
 };

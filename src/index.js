@@ -6,17 +6,12 @@ homePage();
 // menuPage();
 //aboutPage();
 
-const divContent = document.getElementById("content");
+document.getElementById("home-btn").addEventListener("click", homePage);
+document.getElementById("menu-btn").addEventListener("click", menuPage)
+document.getElementById("about-btn").addEventListener("click", aboutPage)
 
-document.getElementById("home-btn").addEventListener("click", () => {
+export default function(...children){
+    const divContent = document.getElementById("content");
     divContent.replaceChildren();
-    homePage();
-})
-document.getElementById("menu-btn").addEventListener("click", () => {
-    divContent.replaceChildren();
-    menuPage();
-})
-document.getElementById("about-btn").addEventListener("click", () => {
-    divContent.replaceChildren();
-    aboutPage();
-})
+    divContent.append(...children);
+};

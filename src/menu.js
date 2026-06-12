@@ -2,10 +2,9 @@ import cherryPieImg from "./images/cherry-pie.jpg";
 import blinyImg from "./images/bliny.jpg";
 import carrotCakeImg from "./images/carrot-cake.jpg";
 import beveragesImg from "./images/beverages.jpg";
+import divContent from "./index.js";
 
 export default function() {
-    const divContent = document.getElementById("content");
-    
     let menuTitle = document.createElement("div");
     menuTitle.classList.add("title");
     menuTitle.textContent = "Menu";
@@ -49,6 +48,5 @@ export default function() {
         });
     })();
 
-
-    divContent.append(menuTitle, menuItemsContainer);
+    divContent(menuTitle, menuItemsContainer);
 }
