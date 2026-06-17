@@ -1,41 +1,10 @@
-import path from "node:path";
-import HtmlWebpackPlugin from "html-webpack-plugin";
+import {merge} from "webpack-merge";
+import common from "./webpack.common.js";
 
-export default {
+export default merge(common,{
     mode: "development",
-    entry: "./src/index.js",
-    output: {
-        filename: "script.js",
-        path: path.resolve(import.meta.dirname, "dist"),
-        clean: true,
-    },
     devtool: "eval-source-map",
     devServer: {
         watchFiles: ["./src/template.html"],
-    },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: "./src/template.html",
-        }),
-    ],
-    module: {
-        rules: [
-            {
-                test: /\.html$/i,
-                use: ["html-loader"],
-            },
-            {
-                test: /\.css$/i,
-                use: ["style-loader","css-loader"],
-            },
-            {
-                test: /\.(png|jpg|jpeg|svg|gif|webp)$/i,
-                type: "asset/resource",
-            },
-            {
-                test: /\.(woff|woff2|eot|ttf|otf)$/i,
-                type: "asset/resource",
-            },
-        ],
-    },
-}
+    }
+});
